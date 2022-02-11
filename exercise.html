@@ -11,7 +11,7 @@
 
 <meta name="author" content="[Your first name] [Your last name]" />
 
-<meta name="date" content="2022-02-10" />
+<meta name="date" content="2022-02-11" />
 
 <title>Exercise 4</title>
 
@@ -255,12 +255,12 @@ div.tocify {
 
 <h1 class="title toc-ignore">Exercise 4</h1>
 <h4 class="author">[Your first name] [Your last name]</h4>
-<h4 class="date">2022-02-10</h4>
+<h4 class="date">2022-02-11</h4>
 
 </div>
 
 
-<p><strong>For this week’s assignment, you’ll construct a period multiple decrement table and interpret the results. For next week’s assignment, using the same dataset, you’ll apply your skills at building associated decrement life tables (including cause-deleted life tables), and conducting cause-specific decomposition of life expectancy differences.</strong></p>
+<p><strong>For this week’s assignment, you’ll construct a period multiple decrement table and interpret the results. For next week’s assignment, using the same dataset, you’ll apply your skills at building associated decrement life tables (including cause-deleted life tables), and cause-specific decomposition of life expectancy differences.</strong></p>
 <div id="setup" class="section level1 unnumbered">
 <h1 class="unnumbered">Setup</h1>
 <pre class="r"><code>if (!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)</code></pre>
@@ -285,8 +285,9 @@ pacman::p_load(dplyr, ggplot2, knitr, kableExtra, readr)</code></pre>
 <div id="build-the-period-multiple-decrement-table" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Build the period multiple decrement table</h1>
 <p><strong>Build a period multiple decrement table using this data. As part of this task, you will also construct a single decrement table. Aside from the first two age groups, where you will use the Coale and Demeny method, assume <span class="math inline">\({}_{n}a_x = n/2\)</span>.</strong></p>
-<p><strong>Show your work in code. I will give partial credit for each step where you get the steps mostly right even if your answer ends up being numerically inaccurate. Each of the nine single decrement table steps is worth 0.25 points (subtotal: 2.25 points). Each of the remaining three steps in multiple decrement table construction is worth the same amount (subtotal: 0.75 points). I’ll give you an additional 1 point for numerically accurate single decrement table results, and 2 points for numerically accurate multiple decrement table results. Total available: 6 points.</strong></p>
+<p><strong>Show your work in code. I will give partial credit for each step where you get the steps mostly right even if your answer ends up being numerically inaccurate. Each of the nine single decrement table steps is worth 0.25 points (subtotal: 2.25 points). Each of the remaining three steps in multiple decrement table construction is worth the same amount (subtotal: 0.75 points). I’ll give you an additional 1 point for numerically accurate single decrement table results, and 2 points for numerically accurate multiple decrement table results.</strong></p>
 <p><strong>Produce your answer in the form of one single decrement table and one multiple decrement table below, with the columns in each table named following the conventions I used in course notes.</strong></p>
+<p><strong>Total points available for question 1: 6</strong></p>
 </div>
 <div id="interpret-the-results" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Interpret the results</h1>
@@ -296,11 +297,12 @@ pacman::p_load(dplyr, ggplot2, knitr, kableExtra, readr)</code></pre>
 <div id="briefly-explain-how-the-pattern-you-described-above-relates-to-the-patterns-in-the-_nq_xi-values-you-calculated.-0.25-points" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Briefly explain how the pattern you described above relates to the patterns in the <span class="math inline">\({}_{n}q_x^i\)</span> values you calculated. (0.25 points)</h2>
 </div>
-<div id="among-a-hypothetical-cohort-who-experiences-this-cause-specific-mortality-schedule-what-proportion-of-those-who-will-eventually-die-of-heart-disease-will-do-so-between-the-ages-of-45-and-65-show-your-work-in-latex.-0.25-points" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Among a hypothetical cohort who experiences this cause-specific mortality schedule, what proportion of those who will eventually die of heart disease will do so between the ages of 45 and 65? Show your work in <span class="math inline">\(\LaTeX\)</span>. (0.25 points)</h2>
+<div id="suppose-that-someone-asks-you-the-following-question-among-a-hypothetical-cohort-who-experiences-this-cause-specific-mortality-schedule-what-proportion-of-those-who-will-eventually-die-of-heart-disease-will-do-so-between-the-ages-of-45-and-65-explain-to-this-person-why-you-cant-answer-their-question.-0.25-points" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Suppose that someone asks you the following question: Among a hypothetical cohort who experiences this cause-specific mortality schedule, what proportion of those who will eventually die of heart disease will do so between the ages of 45 and 65? Explain to this person why you can’t answer their question. (0.25 points)</h2>
 </div>
-<div id="below-produce-a-table-displaying-the-age-specific-all-cause-mortality-rates.-0.25-points" class="section level2" number="2.4">
-<h2><span class="header-section-number">2.4</span> Below, produce a table displaying the age-specific all-cause mortality rates. (0.25 points)</h2>
+<div id="in-preparation-for-next-weeks-assignment-explain-briefly-in-words-what-a-cause-deleted-life-table-built-from-this-data-would-estimate.-0.25-points" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> In preparation for next week’s assignment, explain briefly in words what a cause-deleted life table built from this data would estimate. (0.25 points)</h2>
+<p><strong>Total points available for question 2: 1</strong></p>
 </div>
 </div>
 
