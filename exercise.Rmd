@@ -34,8 +34,8 @@ rus_mxi <- readRDS(url("https://github.com/hanowell/uwsoc533a-exercise-05/blob/m
 **The data has the following structure:**
 
 * `x`**: the exact age at the beginning of the age group**
-* `mx_heart`**: heart disease mortality per person-year**
-* `mx_other`**: mortality due to all other causes, again per person-year**
+* `mx_heart`**: age-specific heart disease mortality rate per person-year**
+* `mx_other`**: age-specific mortality rate due to all other causes, again per person-year**
 
 **Below are the first six rows of this data:**
 
