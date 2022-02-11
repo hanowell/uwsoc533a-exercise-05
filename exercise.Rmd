@@ -1,0 +1,28 @@
+---
+title: "Exercise 4"
+author: '[Your first name] [Your last name]'
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    number_sections: true
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    code_folding: hide
+---
+
+**For this week's assignment, you'll construct a period multiple decrement table and interpret the results. For next week's assignment, using the same dataset, you'll apply your skills at building associated decrement life tables (including cause-deleted life tables), and conducting cause-specific decomposition of life expectancy differences.**
+
+## Setup {.unnumbered}
+
+```{r}
+if (!require("pacman")) install.packages("pacman")
+# p_load function loads packages if installed, or install then loads otherwise
+pacman::p_load(dplyr, ggplot2, knitr, kableExtra, readr)
+```
+
+## Load data {.unnumbered}
+
+```{r}
+
+```
