@@ -29,4 +29,4 @@ rus_mxi <- readRDS(url("https://github.com/hanowell/uwsoc533a-exercise-05/blob/m
 
 ## About the data {.unnumbered}
 
-**You've just loaded age- and cause-specific mortality rates for **
+**You've just loaded age- and cause-specific mortality rates for Russia in 1997. The data comes from the [Human Cause of Death Database](https://www.causesofdeath.org/cgi-bin/country.php?country=RUS). Specifically, I took the age-specific death rates for the so-called [short list](https://www.causesofdeath.org/docs/short_list.pdf) of causes of death. Then I differentiated heart disease mortality from all other causes.**

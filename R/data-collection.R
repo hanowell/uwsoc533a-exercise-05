@@ -30,5 +30,6 @@ rus_mxi <- readr::read_csv("raw/RUS_m_short_idr.csv") %>%
   ) %>%
   dplyr::mutate(
     x = as.numeric(stringr::str_replace_all(x, "p", ""))
-  )
+  ) %>%
+  dplyr::select(-mx_all)
 saveRDS(rus_mxi, "data/rus_mxi.rds")
