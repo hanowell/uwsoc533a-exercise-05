@@ -37,9 +37,19 @@ rus_mxi <- readRDS(url("https://github.com/hanowell/uwsoc533a-exercise-05/blob/m
 * `mx_heart`**: heart disease mortality per person-year**
 * `mx_other`**: mortality due to all other causes, again per person-year**
 
+**Below are the first six rows of this data:**
+
+```{r warning=FALSE, message=FALSE, echo=FALSE}
+rus_mxi %>%
+  head() %>%
+  knitr::kable() %>%
+  kableExtra::kable_classic(full_width = FALSE)
+```
+
+
 # Build the period multiple decrement table
 
-**Build a period multiple decrement table using this data. As part of this task, you will also construct a single decrement table. Aside from the first two age groups, where you will use the Coale and Demeny method, assume ${}_{n}a_x = n/2$.**
+**Build a period multiple decrement table using this data. As part of this task, you will also construct a single decrement table. Aside from the first two age groups, where you will use the Coale and Demeny method, and aside from the open-ended age interval, assume ${}_{n}a_x = n/2$.**
 
 **Show your work in code. I will give partial credit for each step where you get the steps mostly right even if your answer ends up being numerically inaccurate. Each of the nine single decrement table steps is worth 0.25 points (subtotal: 2.25 points). Each of the remaining three steps in multiple decrement table construction is worth the same amount (subtotal: 0.75 points). I'll give you an additional 1 point for numerically accurate single decrement table results, and 2 points for numerically accurate multiple decrement table results.**
 
@@ -55,7 +65,7 @@ rus_mxi <- readRDS(url("https://github.com/hanowell/uwsoc533a-exercise-05/blob/m
 
 ## Briefly explain how the competition between the risk of death due to heart disease vs. all other causes varies with age. (0.25 points)
 
-## Briefly explain how the pattern you described above relates to the patterns in the ${}_{n}q_x^i$ values you calculated. (0.25 points)
+## Briefly explain with reference to the conversion between ${}_{n}q_x^i$ and ${}_{n}m_x^i$ how the pattern you described above relates to the patterns in the ${}_{n}q_x^i$ values you calculated. (0.25 points)
 
 ## Suppose that someone asks you the following question: Among a hypothetical cohort who experiences this cause-specific mortality schedule, what proportion of those who will eventually die of heart disease will do so between the ages of 45 and 65? Explain to this person why you can't answer their question. (0.25 points)
 
