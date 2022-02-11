@@ -3,6 +3,7 @@
 # Libraries ----
 library(dplyr)
 library(readr)
+library(stringr)
 
 # Age-specific death rates for Russia in 1997 ----
 rus_mxi <- readr::read_csv("raw/RUS_m_short_idr.csv") %>%
@@ -26,5 +27,8 @@ rus_mxi <- readr::read_csv("raw/RUS_m_short_idr.csv") %>%
     names_from = disease_type,
     values_from = mx,
     names_prefix = "mx_"
+  ) %>%
+  dplyr::mutate(
+    x = as.numeric(stringr::str_replace_all(x, "p", ""))
   )
 saveRDS(rus_mxi, "data/rus_mxi.rds")

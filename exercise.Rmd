@@ -24,5 +24,9 @@ pacman::p_load(dplyr, ggplot2, knitr, kableExtra, readr)
 ## Load data {.unnumbered}
 
 ```{r}
-
+rus_mxi <- readRDS(url("https://github.com/hanowell/uwsoc533a-exercise-05/blob/main/data/rus_mxi.rds?raw=true"))
 ```
+
+## About the data {.unnumbered}
+
+**You've just loaded age- and cause-specific mortality rates for **
