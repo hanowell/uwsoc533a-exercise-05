@@ -261,20 +261,47 @@ div.tocify {
 
 
 <p><strong>For this week’s assignment, you’ll construct a period multiple decrement table and interpret the results. For next week’s assignment, using the same dataset, you’ll apply your skills at building associated decrement life tables (including cause-deleted life tables), and conducting cause-specific decomposition of life expectancy differences.</strong></p>
-<div id="setup" class="section level2 unnumbered">
-<h2 class="unnumbered">Setup</h2>
+<div id="setup" class="section level1 unnumbered">
+<h1 class="unnumbered">Setup</h1>
 <pre class="r"><code>if (!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)</code></pre>
 <pre><code>## Loading required package: pacman</code></pre>
 <pre class="r"><code># p_load function loads packages if installed, or install then loads otherwise
 pacman::p_load(dplyr, ggplot2, knitr, kableExtra, readr)</code></pre>
 </div>
-<div id="load-data" class="section level2 unnumbered">
-<h2 class="unnumbered">Load data</h2>
+<div id="load-data" class="section level1 unnumbered">
+<h1 class="unnumbered">Load data</h1>
 <pre class="r"><code>rus_mxi &lt;- readRDS(url(&quot;https://github.com/hanowell/uwsoc533a-exercise-05/blob/main/data/rus_mxi.rds?raw=true&quot;))</code></pre>
 </div>
-<div id="about-the-data" class="section level2 unnumbered">
-<h2 class="unnumbered">About the data</h2>
+<div id="about-the-data" class="section level1 unnumbered">
+<h1 class="unnumbered">About the data</h1>
 <p><strong>You’ve just loaded age- and cause-specific mortality rates for Russia in 1997. The data comes from the <a href="https://www.causesofdeath.org/cgi-bin/country.php?country=RUS">Human Cause of Death Database</a>. Specifically, I took the age-specific death rates for the so-called <a href="https://www.causesofdeath.org/docs/short_list.pdf">short list</a> of causes of death. Then I differentiated heart disease mortality from all other causes.</strong></p>
+<p><strong>The data has the following structure:</strong></p>
+<ul>
+<li><code>x</code><strong>: the exact age at the beginning of the age group</strong></li>
+<li><code>mx_heart</code><strong>: heart disease mortality per person-year</strong></li>
+<li><code>mx_other</code><strong>: mortality due to all other causes, again per person-year</strong></li>
+</ul>
+</div>
+<div id="build-the-period-multiple-decrement-table" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Build the period multiple decrement table</h1>
+<p><strong>Build a period multiple decrement table using this data. As part of this task, you will also construct a single decrement table. Aside from the first two age groups, where you will use the Coale and Demeny method, assume <span class="math inline">\({}_{n}a_x = n/2\)</span>.</strong></p>
+<p><strong>Show your work in code. I will give partial credit for each step where you get the steps mostly right even if your answer ends up being numerically inaccurate. Each of the nine single decrement table steps is worth 0.25 points (subtotal: 2.25 points). Each of the remaining three steps in multiple decrement table construction is worth the same amount (subtotal: 0.75 points). I’ll give you an additional 1 point for numerically accurate single decrement table results, and 2 points for numerically accurate multiple decrement table results. Total available: 6 points.</strong></p>
+<p><strong>Produce your answer in the form of one single decrement table and one multiple decrement table below, with the columns in each table named following the conventions I used in course notes.</strong></p>
+</div>
+<div id="interpret-the-results" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Interpret the results</h1>
+<div id="briefly-explain-how-the-competition-between-the-risk-of-death-due-to-heart-disease-vs.-all-other-causes-varies-with-age.-0.25-points" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Briefly explain how the competition between the risk of death due to heart disease vs. all other causes varies with age. (0.25 points)</h2>
+</div>
+<div id="briefly-explain-how-the-pattern-you-described-above-relates-to-the-patterns-in-the-_nq_xi-values-you-calculated.-0.25-points" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Briefly explain how the pattern you described above relates to the patterns in the <span class="math inline">\({}_{n}q_x^i\)</span> values you calculated. (0.25 points)</h2>
+</div>
+<div id="among-a-hypothetical-cohort-who-experiences-this-cause-specific-mortality-schedule-what-proportion-of-those-who-will-eventually-die-of-heart-disease-will-do-so-between-the-ages-of-45-and-65-show-your-work-in-latex.-0.25-points" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Among a hypothetical cohort who experiences this cause-specific mortality schedule, what proportion of those who will eventually die of heart disease will do so between the ages of 45 and 65? Show your work in <span class="math inline">\(\LaTeX\)</span>. (0.25 points)</h2>
+</div>
+<div id="below-produce-a-table-displaying-the-age-specific-all-cause-mortality-rates.-0.25-points" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Below, produce a table displaying the age-specific all-cause mortality rates. (0.25 points)</h2>
+</div>
 </div>
 
 

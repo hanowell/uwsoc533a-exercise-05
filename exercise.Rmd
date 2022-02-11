@@ -13,7 +13,7 @@ output:
 
 **For this week's assignment, you'll construct a period multiple decrement table and interpret the results. For next week's assignment, using the same dataset, you'll apply your skills at building associated decrement life tables (including cause-deleted life tables), and conducting cause-specific decomposition of life expectancy differences.**
 
-## Setup {.unnumbered}
+# Setup {.unnumbered}
 
 ```{r}
 if (!require("pacman")) install.packages("pacman")
@@ -21,12 +21,40 @@ if (!require("pacman")) install.packages("pacman")
 pacman::p_load(dplyr, ggplot2, knitr, kableExtra, readr)
 ```
 
-## Load data {.unnumbered}
+# Load data {.unnumbered}
 
 ```{r}
 rus_mxi <- readRDS(url("https://github.com/hanowell/uwsoc533a-exercise-05/blob/main/data/rus_mxi.rds?raw=true"))
 ```
 
-## About the data {.unnumbered}
+# About the data {.unnumbered}
 
 **You've just loaded age- and cause-specific mortality rates for Russia in 1997. The data comes from the [Human Cause of Death Database](https://www.causesofdeath.org/cgi-bin/country.php?country=RUS). Specifically, I took the age-specific death rates for the so-called [short list](https://www.causesofdeath.org/docs/short_list.pdf) of causes of death. Then I differentiated heart disease mortality from all other causes.**
+
+**The data has the following structure:**
+
+* `x`**: the exact age at the beginning of the age group**
+* `mx_heart`**: heart disease mortality per person-year**
+* `mx_other`**: mortality due to all other causes, again per person-year**
+
+# Build the period multiple decrement table
+
+**Build a period multiple decrement table using this data. As part of this task, you will also construct a single decrement table. Aside from the first two age groups, where you will use the Coale and Demeny method, assume ${}_{n}a_x = n/2$.**
+
+**Show your work in code. I will give partial credit for each step where you get the steps mostly right even if your answer ends up being numerically inaccurate. Each of the nine single decrement table steps is worth 0.25 points (subtotal: 2.25 points). Each of the remaining three steps in multiple decrement table construction is worth the same amount (subtotal: 0.75 points). I'll give you an additional 1 point for numerically accurate single decrement table results, and 2 points for numerically accurate multiple decrement table results. Total available: 6 points.**
+
+**Produce your answer in the form of one single decrement table and one multiple decrement table below, with the columns in each table named following the conventions I used in course notes.**
+
+```{r}
+
+```
+
+# Interpret the results
+
+## Briefly explain how the competition between the risk of death due to heart disease vs. all other causes varies with age. (0.25 points)
+
+## Briefly explain how the pattern you described above relates to the patterns in the ${}_{n}q_x^i$ values you calculated. (0.25 points)
+
+## Among a hypothetical cohort who experiences this cause-specific mortality schedule, what proportion of those who will eventually die of heart disease will do so between the ages of 45 and 65? Show your work in $\LaTeX$. (0.25 points)
+
+## Below, produce a table displaying the age-specific all-cause mortality rates. (0.25 points)
